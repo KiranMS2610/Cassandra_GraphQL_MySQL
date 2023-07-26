@@ -1,0 +1,13 @@
+schema{
+  query: Query
+}
+
+type Query{
+  allProperty: [Latency_stats]
+}
+
+type Latency_stats {
+	id: Int!
+	read_total_latency: Int!
+	write_total_latency: Int!
+}

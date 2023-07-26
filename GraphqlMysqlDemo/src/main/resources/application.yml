@@ -1,0 +1,8 @@
+
+spring:
+  datasource: 
+     url: jdbc:mysql://localhost:3306/metrics_cas
+     username: root
+     password: msk@123
+server:
+  port : 8080
