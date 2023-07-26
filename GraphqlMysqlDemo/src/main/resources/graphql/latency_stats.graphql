@@ -1,13 +1,24 @@
-schema{
+schema {
   query: Query
 }
 
-type Query{
-  allProperty: [Latency_stats]
+type Query {
+  allMetrics: [Latency_stats!]!
 }
 
 type Latency_stats {
-	id: Int!
-	read_total_latency: Int!
-	write_total_latency: Int!
+  id: Int!
+  read_latency_count: Int
+  read_latency_one_minute_rate: Float
+  read_latency_five_minute_rate: Float
+  read_latency_fifteen_minute_rate: Float
+  read_total_latency: Int
+  write_latency_count: Int
+  write_latency_one_minute_rate: Float
+  write_latency_five_minute_rate: Float
+  write_latency_fifteen_minute_rate: Float
+  write_total_latency: Int
+  total_disk_space_used: Int
+  live_nodes: String
+  unresponsive_nodes: String
 }
